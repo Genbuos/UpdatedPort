@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Mitchell</title>
+    <title>Jordan Mitchell | Home</title>
+   <link rel="stylesheet" href="/static/main.css">
 </head>
 <body>
-    <h2>Jordan Mitchell - Software Developer</h2>
-    <p>Welcome to my personal website! I am a software developer with a passion for creating innovative solutions. Feel free to explore my projects and get in touch!</p>
+
+    <div class="container"> 
+      
+        <div class="header">
+              <h2>Jordan Mitchell - Software Developer</h2>
+                <p>Welcome to my personal website! I am a software developer with a passion for creating innovative solutions. Feel free to explore my projects and get in touch!</p>
+            <video class="header-video" autoplay muted loop>
+                <source src="/static/images/clouds.mp4" type="video/mp4">
+            </video>
+        </div>
+
+      <div class="content">
+        <div class="projects-grid">
+        {% for row in projects %}
+            {% for project in row %}
+                <div class="project-card">
+                    <div>
+                        <h3>{{ project['title'] }}</h3>
+                        <p>{{ project['description'] }}</p>
+                    </div>
+                    
+                    <div class="project-media">
+                     
+                            <img src="images/{{ project['image'] }}" alt="{{ project['title'] }}">
+                        
+                    </div>
+                    
+                    <div class="project-buttons">
+                        <a href="{{ project['url'] }}" class="project-btn source-btn" target="_blank">Source Code</a>
+                        {% if not project['title'].lower().startswith('bank') %}
+                            <a href="{{ project['website_url'] }}" class="project-btn website-btn" target="_blank">Website</a>
+                        {% endif %}
+                    </div>
+                    
+                    {% if not project['title'].lower().startswith('bank') and (not project['website_url'] or project['website_url'] == '#') %}
+                        <div class="warning">Website not running!</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
 
 
-    <
+        
+    </div>
+    
+
+
 </body>
 </html>
