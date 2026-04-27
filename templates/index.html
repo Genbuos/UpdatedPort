@@ -30,18 +30,18 @@
                     
                     <div class="project-media">
                      
-                            <img src="images/{{ project['image'] }}" alt="{{ project['title'] }}">
+                            <img src="/static/images/{{ project['image'] }}" alt="{{ project['title'] }}">
                         
                     </div>
                     
                     <div class="project-buttons">
                         <a href="{{ project['url'] }}" class="project-btn source-btn" target="_blank">Source Code</a>
-                        {% if not project['title'].lower().startswith('bank') %}
+                        {% if not project['title'].lower().startswith('java') %}
                             <a href="{{ project['website_url'] }}" class="project-btn website-btn" target="_blank">Website</a>
                         {% endif %}
                     </div>
                     
-                    {% if not project['title'].lower().startswith('bank') and (not project['website_url'] or project['website_url'] == '#') %}
+                    {% if not project['title'].lower().startswith('java') and (not project['website_url'] or project['website_url'] == '#') %}
                         <div class="warning">Website not running!</div>
                     {% endif %}
                 </div>
@@ -52,8 +52,5 @@
 
         
     </div>
-    
-
-
 </body>
 </html>
