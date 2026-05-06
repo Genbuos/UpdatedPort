@@ -29,10 +29,115 @@
 .header h2 {
   position: relative;
   z-index: 2;
-  color: rgb(10, 80, 138);
+  color: #fff;
   text-align: center;
   padding: 20px;
+  margin: 0 auto;
 }
+
+.typing-text {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  min-height: 1em;
+}
+
+.typing-text .word {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  top: 2px;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: solid orange;
+  animation: typing 0.6s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+.typing-text .word:nth-child(1) {
+  animation: cycle-word-1 9s infinite steps(1);
+}
+
+.typing-text .word:nth-child(2) {
+  animation: cycle-word-2 9s infinite steps(1);
+}
+
+.typing-text .word:nth-child(3) {
+  animation: cycle-word-3 9s infinite steps(1);
+}
+
+@keyframes cycle-word-1 {
+  0% { width: 0; opacity: 1; }
+  0.74% { width: 11.11%; opacity: 1; }
+  1.48% { width: 22.22%; opacity: 1; }
+  2.22% { width: 33.33%; opacity: 1; }
+  2.96% { width: 44.44%; opacity: 1; }
+  3.7% { width: 55.55%; opacity: 1; }
+  4.44% { width: 66.66%; opacity: 1; }
+  5.18% { width: 77.77%; opacity: 1; }
+  5.92% { width: 88.88%; opacity: 1; }
+  6.67% { width: 100%; opacity: 1; }
+  27.78% { width: 100%; opacity: 1; }
+  28.52% { width: 88.88%; opacity: 1; }
+  29.26% { width: 77.77%; opacity: 1; }
+  30% { width: 66.66%; opacity: 1; }
+  30.74% { width: 55.55%; opacity: 1; }
+  31.48% { width: 44.44%; opacity: 1; }
+  32.22% { width: 0; opacity: 0; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes cycle-word-2 {
+  0% { width: 0; opacity: 0; }
+  33.33% { width: 0; opacity: 0; }
+  33.83% { width: 12.5%; opacity: 1; }
+  34.33% { width: 25%; opacity: 1; }
+  34.83% { width: 37.5%; opacity: 1; }
+  35.33% { width: 50%; opacity: 1; }
+  35.83% { width: 62.5%; opacity: 1; }
+  36.33% { width: 75%; opacity: 1; }
+  36.83% { width: 87.5%; opacity: 1; }
+  40% { width: 100%; opacity: 1; }
+  61.11% { width: 100%; opacity: 1; }
+  61.61% { width: 87.5%; opacity: 1; }
+  62.11% { width: 75%; opacity: 1; }
+  62.61% { width: 62.5%; opacity: 1; }
+  63.11% { width: 50%; opacity: 1; }
+  63.61% { width: 37.5%; opacity: 1; }
+  64.11% { width: 25%; opacity: 1; }
+  64.61% { width: 12.5%; opacity: 1; }
+  65.56% { width: 0; opacity: 0; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes cycle-word-3 {
+  0% { width: 0; opacity: 0; }
+  66.67% { width: 0; opacity: 0; }
+  67.41% { width: 16.66%; opacity: 1; }
+  68.15% { width: 33.32%; opacity: 1; }
+  68.89% { width: 49.98%; opacity: 1; }
+  69.63% { width: 66.64%; opacity: 1; }
+  70.37% { width: 83.3%; opacity: 1; }
+  73.33% { width: 100%; opacity: 1; }
+  94.44% { width: 100%; opacity: 1; }
+  95.18% { width: 83.3%; opacity: 1; }
+  95.92% { width: 66.64%; opacity: 1; }
+  96.66% { width: 49.98%; opacity: 1; }
+  97.4% { width: 33.32%; opacity: 1; }
+  98.14% { width: 16.66%; opacity: 1; }
+  98.89% { width: 0; opacity: 0; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-right-color: orange;
+  }
+  51%, 100% {
+    border-right-color: transparent;
+  }
+}
+
 .header p{
   position: relative;
   z-index: 2;
