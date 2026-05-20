@@ -1,8 +1,7 @@
 title;description;url;website_url;image
-Todo App;A distraction-free web app to help you focus on creating and completing tasks.;https://github.com/Genbuos/PythonWebsite;https://genbuos-web-todo-web-tfq2gm.streamlit.app;1.png
+Todo App;A distraction-free web app to help you focus on creating and completing tasks.;https://github.com/Genbuos/PythonWebsite;#;1.png
 Food Truck App;A mobile and web app built with React Native and Expo that allows foodtruck management and orders for 7 different foodtrucks.;https://github.com/Genbuos/FoodTrax7;#;19.png
 Java Bank Application;A rest API built with Java & Springboot that simulates an online banking system.;https://github.com/azhang777/BankingAPI;#;15.png
 Java Farm System; A Java project to demonstrate multi-inheritence design issues. Complete with an UML diagram and JUNIT Testing.;https://github.com/Genbuos/FarmUpgrades;#;farm.jpg
-Java TDD-AnimalFactory; A Java project to establish familiarity with Test-Driven-Development (TDD) practices.;Must ADD LINk;#;TDD.jpg
-Student Management System; A Student Database built with Python. Complete with CRUD operations and a GUI;Must Add Link;#;18.png
+Java TDD-AnimalFactory; A Java project to establish familiarity with Test-Driven-Development (TDD) practices.;https://github.com/Genbuos/TDD-AnimalFactory-jordy;#;TDD.jpg
 Web automation GUI; A Python project to demonstrate web automation using Selenium. Complete with a GUI.;https://github.com/Genbuos/PySelenium;#;selenium.jpg

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
@@ -23,4 +24,5 @@ def contact():
 def projects():
     return render_template('projects.html')
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)), debug=False)
